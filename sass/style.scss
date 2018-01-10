@@ -7,8 +7,7 @@ body {
 	border: 2px solid red;
 	width: 400px;
 	box-sizing: border-box;
-	overflow-x: scroll;
-	overflow-y: hidden;
+	overflow: hidden;
 }
 ul {
 	list-style-type: none;
