@@ -1,0 +1,29 @@
+body {
+	margin: 0;
+	padding: 0;
+}
+@mixin size {
+	width: 400px;
+	height: 300px;
+}
+#carousel {
+	margin: 100px auto;
+	border: 2px solid #34495e;
+	width: 400px;
+	box-shadow: 8px 8px 8px gray;
+	box-sizing: border-box;
+	overflow: hidden;
+}
+ul {
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+	width: 2000px;
+}
+ul > li {
+	@include size;
+	float: left;
+}
+.photos {
+	@include size;
+}
