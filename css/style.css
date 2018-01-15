@@ -1,9 +1,17 @@
 body { margin: 0; padding: 0; }
 
-#carousel { margin: 100px auto; border: 2px solid #34495e; width: 400px; box-shadow: 8px 8px 8px gray; box-sizing: border-box; overflow: hidden; }
+#carousel { margin: 100px auto; border: 2px solid #34495e; width: 400px; height: 300px; box-shadow: 8px 8px 8px gray; box-sizing: border-box; overflow: hidden; position: relative; }
 
-ul { list-style-type: none; padding: 0; margin: 0; width: 2000px; }
+#carousel .btn-left { position: absolute; top: 50%; }
 
-ul > li { width: 400px; height: 300px; float: left; }
+#carousel .btn-right { position: absolute; top: 50%; right: 0; }
 
-.photos { width: 400px; height: 300px; }
+#carousel .btn-left:hover, #carousel .btn-right:hover { cursor: pointer; }
+
+#carousel ul { margin: 0; padding: 0; width: 2000px; }
+
+#carousel ul li { width: 400px; height: 300px; float: left; list-style-type: none; }
+
+#carousel ul li .image-text { margin: 0; padding: 10px; position: relative; bottom: 20%; text-align: center; color: #fff; font-size: 20px; }
+
+#carousel ul li .photos { width: 400px; height: 300px; }

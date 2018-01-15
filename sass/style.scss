@@ -1,4 +1,4 @@
-body {
+@mixin reset-margin-padding {
 	margin: 0;
 	padding: 0;
 }
@@ -6,24 +6,50 @@ body {
 	width: 400px;
 	height: 300px;
 }
+@mixin btn-position {
+	position: absolute;
+	top: 50%;
+}
+body {
+	@include reset-margin-padding;
+}
 #carousel {
 	margin: 100px auto;
 	border: 2px solid #34495e;
-	width: 400px;
+	@include size;
 	box-shadow: 8px 8px 8px gray;
 	box-sizing: border-box;
 	overflow: hidden;
-}
-ul {
-	list-style-type: none;
-	padding: 0;
-	margin: 0;
-	width: 2000px;
-}
-ul > li {
-	@include size;
-	float: left;
-}
-.photos {
-	@include size;
+	position: relative;
+	.btn-left {
+		@include btn-position;
+	}
+	.btn-right {
+		@include btn-position;
+		right: 0;
+	}
+	.btn-left:hover, .btn-right:hover {
+		cursor: pointer;
+	}
+	ul {
+		@include reset-margin-padding;
+		width: 2000px;
+		li {
+			@include size;
+			float: left;
+			list-style-type: none;
+			.image-text {
+				margin: 0;
+				padding: 10px;
+				position: relative;
+				bottom: 20%;
+				text-align: center;
+				color: #fff;
+				font-size: 20px;
+			}
+			.photos {
+				@include size;
+			}
+		}
+	}
 }

@@ -7,7 +7,7 @@ $(function(){
 	function changeSlide(){
 
 		carouselList.animate({'marginLeft':-400}, 2000, moveFirstSlide);
-	
+
 	}
 
 	function moveFirstSlide(){
@@ -19,7 +19,7 @@ $(function(){
 
 //doda za ostatnim elementem pierwszy element (metoda after)
 
-		lastItem.after(firstItem)
+		lastItem.after(firstItem);
 
 //zresetuje lewy margines z powrotem na wartość 0 (metoda css)
 
@@ -27,3 +27,5 @@ $(function(){
 	}
 
 });
+
+//-------------------------------------------------------------
